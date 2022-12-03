@@ -27,11 +27,15 @@ def part1(data: list[str]) -> int:
         #print((*items(r)))
         #print(f"this {set.intersection(*items(r)).pop()}")
         print (f"haha {items(r)}")
+        #eine methode es in [{a,b,c},{c,d,e}] zu kriegen
+        #hier muss inter in das return anstatt von *test
         inter = []
         newlist1 = set(items(r)[0])
         newlist2 = set(items(r)[1])
         inter.append(newlist1)
         inter.append(newlist2)
+        # eine andere methode es in [{a,b,c},{c,d,e}] zu kriegen
+        # *test im retuirn gibt die einzelnen eintäge {} wieder
         test = map(set,items(r))
         test2 = map(set, items(r))
         print(f"meinsettt  {test} ")
