@@ -51,7 +51,6 @@ while i < len(lines)-2:
     i += 3
 
 print(team_item)
-print(len(team_item))
 
 sum_of_priorities2 = 0
 for entry in team_item:
