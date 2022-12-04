@@ -2,6 +2,7 @@ with open ("input3") as f:
     lines = f.read()
 lines = lines.split("\n")
 
+
 def priority(item: str) -> int:
     o = ord(item)
     if 65 <= o <= 90:
@@ -20,12 +21,12 @@ def part1(data: list[str]) -> int:
     def items(r: str):
         print(map(set, compartments(r)))
         print(compartments(r))
-        #return map(set, compartments(r))
+        # return map(set, compartments(r))
         return compartments(r)
 
     def missplaced(r: str):
-        #print((*items(r)))
-        #print(f"this {set.intersection(*items(r)).pop()}")
+        # print((*items(r)))
+        # print(f"this {set.intersection(*items(r)).pop()}")
         print (f"haha {items(r)}")
         #eine methode es in [{a,b,c},{c,d,e}] zu kriegen
         #hier muss inter in das return anstatt von *test
@@ -35,7 +36,7 @@ def part1(data: list[str]) -> int:
         inter.append(newlist1)
         inter.append(newlist2)
         # eine andere methode es in [{a,b,c},{c,d,e}] zu kriegen
-        # *test im retuirn gibt die einzelnen eintäge {} wieder
+        # *test im return gibt die einzelnen eintäge {} wieder
         test = map(set,items(r))
         test2 = map(set, items(r))
         print(f"meinsettt  {test} ")
@@ -47,7 +48,6 @@ def part1(data: list[str]) -> int:
     return sum(priority(missplaced(r)) for r in data)
 
 
-
 def part2(data: list[str], n: int = 3) -> int:
     def items(group: list[str]):
         return map(set, group)
@@ -57,5 +57,6 @@ def part2(data: list[str], n: int = 3) -> int:
 
     return sum(priority(badge(data[i : i + n])) for i in range(0, len(data), n))
 
+
 print(part1(lines))
-print(part2(lines))
+printpart2(lines)

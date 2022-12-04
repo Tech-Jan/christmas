@@ -59,6 +59,6 @@ for entry in team_item:
 print(sum_of_priorities2)
 
 print(lines[0])
-lineslice= slice(0,len(lines[0])/2)
-print(lines[0][slice(0,int(len(lines[0])/2))])
-print(lines[0][slice(int(len(lines[0])/2),int(len(lines[0])))])
+lineslice = slice(0, len(lines[0])/2)
+print(lines[0][slice(0, int(len(lines[0])/2))])
+print(lines[0][slice(int(len(lines[0])/2), int(len(lines[0])))])
