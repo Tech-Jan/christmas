@@ -39,9 +39,11 @@ def transform_range2(read_elve):
 def overlap2(range1, range2):
     """overlap variant 2. works with transform_range2 variant 2"""
     for i in range1:
-        for b in range2:
-            if i == b and i != ".":
-                return 1
+        if i in range2 and i != ".":
+            return 1
+        # for b in range2:
+        #     if i == b and i != ".":
+        #         return 1
     return 0
 
 
@@ -76,8 +78,8 @@ for elve in pair_elves:
     elve2_range = read_range(elve[1])
     elve1_longrange = transform_range((elve[0]))
     elve2_longrange = transform_range((elve[1]))
-    elve1_longrange2 = transform_range((elve[0]))
-    elve2_longrange2 = transform_range((elve[1]))
+    elve1_longrange2 = transform_range2((elve[0]))
+    elve2_longrange2 = transform_range2((elve[1]))
     print(elve)
     sum_fully_contains += compare_range(elve1_range, elve2_range)
     sum_overlap += overlap(elve1_longrange, elve2_longrange)
